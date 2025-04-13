@@ -7,11 +7,11 @@ using ProEventos.Persistence.Contratos;
 
 namespace ProEventos.Persistence
 {
-    public class PalestrantesPersistence : IPalestrantesPersistence
+    public class PalestrantePersist : IPalestrantePersist
     {
         private readonly ProEventosContext _context;
-        
-        public PalestrantesPersistence(ProEventosContext context)
+
+        public PalestrantePersist(ProEventosContext context)
         {
             _context = context;
         }
