@@ -10,6 +10,10 @@ import { ValidatorField } from '@app/helpers/ValidatorField';
 export class PerfilComponent implements OnInit {
   form!: FormGroup;
 
+  get f(): any {
+    return this.form.controls;
+  }
+
   constructor(public fb: FormBuilder) { }
 
   ngOnInit() {
@@ -44,9 +48,4 @@ export class PerfilComponent implements OnInit {
     event.preventDefault();
     this.form.reset();
   }
-
-  get f(): any {
-    return this.form.controls;
-  }
-
 }
