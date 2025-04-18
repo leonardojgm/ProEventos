@@ -1,13 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { ToastrModule } from 'ngx-toastr';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { NgxCurrencyModule } from 'ngx-currency';
@@ -71,6 +72,7 @@ defineLocale('pt-br', ptBrLocale);
     BsDropdownModule.forRoot(),
     BsDatepickerModule.forRoot(),
     ModalModule.forRoot(),
+    PaginationModule.forRoot(),
     ToastrModule.forRoot({
       timeOut: 4000,
       positionClass: 'toast-bottom-right',
