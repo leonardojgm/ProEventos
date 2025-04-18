@@ -178,8 +178,8 @@ namespace ProEventos.Persistence.Migrations
                         .IsConcurrencyToken()
                         .HasColumnType("TEXT");
 
-                    b.Property<sbyte>("Descricao")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("Descricao")
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Email")
                         .HasMaxLength(256)

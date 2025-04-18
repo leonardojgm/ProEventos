@@ -79,7 +79,7 @@ namespace ProEventos.Persistence.Migrations
                     PrimeiroNome = table.Column<string>(type: "TEXT", nullable: true),
                     UltimoNome = table.Column<string>(type: "TEXT", nullable: true),
                     Titulo = table.Column<int>(type: "INTEGER", nullable: false),
-                    Descricao = table.Column<sbyte>(type: "INTEGER", nullable: false),
+                    Descricao = table.Column<string>(type: "TEXT", nullable: true),
                     Funcao = table.Column<int>(type: "INTEGER", nullable: false),
                     ImagemURL = table.Column<string>(type: "TEXT", nullable: true),
                     UserName = table.Column<string>(type: "TEXT", maxLength: 256, nullable: true),
