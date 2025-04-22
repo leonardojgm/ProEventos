@@ -32,7 +32,7 @@ namespace ProEventos.Persistence.Migrations
                 table: "Palestrantes");
 
             migrationBuilder.AddColumn<int>(
-                name: "UserID",
+                name: "UserId",
                 table: "Palestrantes",
                 type: "INTEGER",
                 nullable: false,
@@ -49,7 +49,7 @@ namespace ProEventos.Persistence.Migrations
                 oldNullable: true);
 
             migrationBuilder.AddColumn<int>(
-                name: "UserID",
+                name: "UserId",
                 table: "Eventos",
                 type: "INTEGER",
                 nullable: false,
@@ -209,14 +209,14 @@ namespace ProEventos.Persistence.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Palestrantes_UserID",
+                name: "IX_Palestrantes_UserId",
                 table: "Palestrantes",
-                column: "UserID");
+                column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Eventos_UserID",
+                name: "IX_Eventos_UserId",
                 table: "Eventos",
-                column: "UserID");
+                column: "UserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
@@ -256,17 +256,17 @@ namespace ProEventos.Persistence.Migrations
                 unique: true);
 
             migrationBuilder.AddForeignKey(
-                name: "FK_Eventos_AspNetUsers_UserID",
+                name: "FK_Eventos_AspNetUsers_UserId",
                 table: "Eventos",
-                column: "UserID",
+                column: "UserId",
                 principalTable: "AspNetUsers",
                 principalColumn: "Id",
                 onDelete: ReferentialAction.Cascade);
 
             migrationBuilder.AddForeignKey(
-                name: "FK_Palestrantes_AspNetUsers_UserID",
+                name: "FK_Palestrantes_AspNetUsers_UserId",
                 table: "Palestrantes",
-                column: "UserID",
+                column: "UserId",
                 principalTable: "AspNetUsers",
                 principalColumn: "Id",
                 onDelete: ReferentialAction.Cascade);
@@ -291,11 +291,11 @@ namespace ProEventos.Persistence.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropForeignKey(
-                name: "FK_Eventos_AspNetUsers_UserID",
+                name: "FK_Eventos_AspNetUsers_UserId",
                 table: "Eventos");
 
             migrationBuilder.DropForeignKey(
-                name: "FK_Palestrantes_AspNetUsers_UserID",
+                name: "FK_Palestrantes_AspNetUsers_UserId",
                 table: "Palestrantes");
 
             migrationBuilder.DropForeignKey(
@@ -328,19 +328,19 @@ namespace ProEventos.Persistence.Migrations
                 name: "AspNetUsers");
 
             migrationBuilder.DropIndex(
-                name: "IX_Palestrantes_UserID",
+                name: "IX_Palestrantes_UserId",
                 table: "Palestrantes");
 
             migrationBuilder.DropIndex(
-                name: "IX_Eventos_UserID",
+                name: "IX_Eventos_UserId",
                 table: "Eventos");
 
             migrationBuilder.DropColumn(
-                name: "UserID",
+                name: "UserId",
                 table: "Palestrantes");
 
             migrationBuilder.DropColumn(
-                name: "UserID",
+                name: "UserId",
                 table: "Eventos");
 
             migrationBuilder.AddColumn<string>(

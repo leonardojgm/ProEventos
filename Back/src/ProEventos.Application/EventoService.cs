@@ -27,6 +27,7 @@ namespace ProEventos.Application
             try
             {
                 var evento = _mapper.Map<Evento>(model);
+                
                 evento.UserId = userId;
 
                 _geralPersist.Add<Evento>(evento);
